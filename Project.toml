@@ -1,0 +1,4 @@
+name = "MultipartiteGraphs"
+uuid = "a2191624-ac72-11e9-00f1-677bf6736619"
+authors = ["Simon Mandlik <simon.mandlik@gmail.com>"]
+version = "0.1.0"
