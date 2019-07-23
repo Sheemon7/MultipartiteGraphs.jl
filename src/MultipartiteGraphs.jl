@@ -4,8 +4,10 @@ using LightGraphs
 using MetaGraphs
 
 import LightGraphs:
-    ne, nv, is_directed, add_vertex!, add_edge!, has_edge, has_vertex,
-    inneighbors, outneighbors, all_neighbors, dst, src
+    ne, nv, vertices, edges, has_edges, has_vertex,
+    is_directed, inneighbors, outneighbors, all_neighbors,
+    dst, src,
+    add_vertex!, add_edge!
 
 import GraphPlot:
     gplot
@@ -18,7 +20,9 @@ end
 
 MultipartiteGraph() = MultipartiteGraph(MetaGraph(Graph()))
 
-for f in [:ne, :nv, :vertices, :edges, :is_directed, :has_edge, :has_vertex, :inneighbors, :outneighbors, :all_neighbors, :dst, :src, :gplot]
+for f in [:ne, :nv, :vertices, :edges, :has_edge, :has_vertex,
+          :is_directed, :inneighbors, :outneighbors, :all_neighbors,
+          :dst, :src, :gplot]
     @eval @inline $f(g::MultipartiteGraph, args...; kwargs...) = $f(g.mg, args...; kwargs...)
 end
 
