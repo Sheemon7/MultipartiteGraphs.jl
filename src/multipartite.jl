@@ -65,3 +65,16 @@ end
 
 export MultipartiteGraph
 export mp_nv, mp_ne, mp_vertices, mp_edges, mp_inneighbors, mp_outneighbors
+
+export
+    ne, nv, vertices, edges, has_edge, has_vertex,
+    is_directed, inneighbors, outneighbors,
+    dst, src,
+    add_vertex!, add_edge!
+
+export
+    props, get_prop,
+    set_props!, set_prop!,
+    rem_prop!, has_prop,
+    clear_props!
+
